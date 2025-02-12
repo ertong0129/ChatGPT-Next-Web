@@ -541,8 +541,6 @@ const bytedanceModels = [
 
 const alibabaModes = [
   "qwen-max",
-  "deepseek-r1",
-  "deepseek-v3",
 ];
 
 const tencentModels = [
