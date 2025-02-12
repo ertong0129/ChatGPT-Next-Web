@@ -565,7 +565,7 @@ const iflytekModels = [
   "4.0Ultra",
 ];
 
-const deepseekModels = ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"];
+const deepseekModels = ["deepseek-r1", "deepseek-v3"];
 
 const xAIModes = [
   "grok-beta",
@@ -637,6 +637,17 @@ export const DEFAULT_MODELS = [
       providerName: "Alibaba",
       providerType: "alibaba",
       sorted: 7,
+    },
+  })),
+  ...deepseekModels.map((name) => ({
+    name,
+    available: true,
+    sorted: seq++,
+    provider: {
+      id: "deepseek",
+      providerName: "DeepSeek",
+      providerType: "deepseek",
+      sorted: 13,
     },
   })),
 ] as const;
