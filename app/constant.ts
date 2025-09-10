@@ -473,6 +473,9 @@ const openaiModels = [
   // as it is cheaper, more capable, multimodal, and just as fast. gpt-3.5-turbo is still available for use in the API.
   "gpt-4o",
   "gpt-4o-mini",
+  "gpt-5",
+  "gpt-5-chat",
+  "gpt-5-mini"
 ];
 
 const googleModels = [
@@ -635,17 +638,6 @@ export const DEFAULT_MODELS = [
       providerName: "DeepSeek",
       providerType: "deepseek",
       sorted: 13,
-    },
-  })),
-  ...anthropicModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "anthropic",
-      providerName: "Anthropic",
-      providerType: "anthropic",
-      sorted: 4,
     },
   })),
 ] as const;
